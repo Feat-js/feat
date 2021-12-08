@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Test1",
+        "body": "This is very cool and epic!",
+        "published": true
+    },
+    {
+        "title": "Test2",
+        "body": "This is very cool and epic but the second thing :) ",
+        "published": false
+    },
+    {
+        "title": "Test3",
+        "body": "Third thing is this",
+        "published": true
+    }
+]

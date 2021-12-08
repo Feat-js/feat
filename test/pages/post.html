@@ -1,0 +1,19 @@
+<Include src="test/pages/parts/header" />
+
+<body>
+    
+    <Navigation title="My cool website" href="/">
+        <NavItem name="Home" href="/" />
+        <NavItem name="About" href="/about" />	
+        <NavItem name="Contact" href="mailto:{{ email }}" />
+    </Navigation>
+
+    <Container>
+
+        <h1>{{ post.title }}</h1>
+
+        <p>{{ post.body }}</p>
+
+    </Container>
+
+</body>
