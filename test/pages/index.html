@@ -4,7 +4,7 @@
     
     <Navigation title="My cool website" href="/">
         <NavItem name="Home" href="/" />
-        <NavItem name="About" href="/about" />
+        <NavItem name="About" href="/about" />	
         <NavItem name="Contact" href="mailto:{{ email }}" />
     </Navigation>
 
@@ -17,6 +17,7 @@
                 <div class="post">
                     <h2>{{ post.title }}</h2>
                     <p>{{ post.body }}</p>
+                    <a href="/post/{{ post.title }}">Read more</a>
                 </div>
                 <br>
 

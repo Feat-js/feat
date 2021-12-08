@@ -14,6 +14,21 @@ class Feat {
             process.Featjs.app = app;
             process.Featjs.fBlob = [];
 
+            let frontendImport = fs.readdirSync(__dirname + '/../frontend');
+            let fullHtml = ``;
+    
+            frontendImport.forEach((file, i) => {
+                let header = fs.readFileSync(__dirname + '/../frontend/' + file, 'utf8');
+                fullHtml += header + "\n";
+            });
+
+            app.get("/featFwApi/frontend.js", (req, res) => {
+
+                //send js code
+                res.send(fullHtml);
+
+
+            });
 
         }
 
@@ -48,8 +63,16 @@ class Feat {
 
         let viewPath = process.cwd() + '/' + viewName + '.html';
 
-        let html = renderView(viewPath, options);
+        //read header file
+
+        let html = `<script src="/featFwApi/frontend.js"></script>`;
+        html += renderView(viewPath, options);
+
         callback(null, html);
+
+
+
+
         let endTime = new Date();
         let time = endTime - startTime;
         console.log('render time: ' + time + 'ms');
