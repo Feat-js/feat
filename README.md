@@ -112,16 +112,23 @@ registerComponent is used to register another component (Say if you want to crea
 
 ## Internal Components
 
-** <Component src="pathToComponent" /> **
+``<Component src="pathToComponent" />``
+
 This will import the component for you.
 
-** <Include src="pathToView" /> **
+
+``<Include src="pathToView" />``
+
 This will import the selected view for you and render it.
 
-** <Foreach in="array" as="name"> **
+
+``<Foreach in="array" as="name">``
+
 This will loop through the array and render the content within the tags for each element.
 
-** <If condition="conditionHere"> **
+
+``<If condition="conditionHere">``
+
 This will render the content within the tags if the condition is true.
 Do note however that with variables there are multiple ways to do this.
 You can use the following syntaxes:
@@ -133,6 +140,8 @@ You can use the following syntaxes:
 1 === 1 (works)
 variable (does not work)
 ```
+
+
 ## Functions
 
 In Feat.js there are some standalone functions that can be used.
