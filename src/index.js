@@ -3,6 +3,8 @@ let fs = require('fs');
 
 let components = require("./../lib/exports");
 
+//? Maybe make a option to allow custom error handler (Fate)
+
 class Feat {
     constructor(app, opts) {
         //set res.render function for express

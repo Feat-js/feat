@@ -3,7 +3,7 @@
   <img src="https://github.com/Feat-js/assets/blob/main/feat.js-icon_text.png?raw=true" width="50%"/>
 </p>
 
-# FeatJS - A JavaScript library for easy, powerful and 1fast web development
+# FeatJS - A JavaScript library for easy, powerful and fast web development
 
 ## Features:
 - [x] Custom Components using JS
