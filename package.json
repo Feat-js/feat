@@ -1,20 +1,29 @@
 {
   "name": "feat.js",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha unit",
     "start": "nodemon ./test/test.js"
   },
+  "homepage":"https://github.com/Feat-js/feat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Feat-js/feat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Feat-js/feat/issues",
+    "email": "support@skyswift.eu"
+  },
+  "license": "GNU General Public License v3.0",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "skyswift.eu",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "assert": "^2.0.0",
     "express": "^4.17.1",
     "mocha": "^9.1.3",

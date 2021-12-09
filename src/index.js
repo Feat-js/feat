@@ -98,7 +98,7 @@ class Feat {
 
         let endTime = new Date();
         let time = endTime - startTime;
-        console.log('render time: ' + time + 'ms');
+        //console.log('render time: ' + time + 'ms');
     }
 }
 
