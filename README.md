@@ -13,6 +13,7 @@
 - [x] Integrated tags like Foreach, If, Else, Switch, etc.
 - [x] Integrated attributes like if, disabled, checked, etc.
 - [X] Express support!
+- [X] Built-in server error handler
  
 ## Soon:
 - [ ] Typescript Support
@@ -49,6 +50,13 @@ res.render("pathToView", {});
 ```
 pathToView = the path to the view file.
 {} = the data you want to pass to the view.
+
+## Using a custom Error handler
+Our custom error handler (500 error) can easily be added into your project!
+```js
+app.useErrorHandler();
+```
+app = Express app with Feat attached.
 
 ## Components
 
