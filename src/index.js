@@ -60,7 +60,7 @@ class Feat {
      */
     render(view, options, callback) {
         //get view file path
-        let maxIterations = 5; //100
+        let maxIterations = 1; //100
         let startTime = new Date();
 
         function renderView(viewPath, options) {
@@ -68,7 +68,6 @@ class Feat {
 
             let parseVars = require('./../lib/parseVars');
             let CustomComponent = require('./../lib/customTagParser');
-            let FeatAtributes = require('./../lib/attributeParser');
 
             let result = html;
             let blb = [];
