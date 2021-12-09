@@ -1,1 +1,20 @@
-<p id="test" test="yes">Test</p>
+<Include src="test/pages/parts/header" />
+
+<body>
+
+    <Navigation title="My cool website" href="/">
+        <NavItem name="Home" href="/" />
+        <NavItem name="About" href="/about" />	
+        <NavItem name="Contact" href="mailto:{{ email }}" />
+    </Navigation>
+
+    <Container>
+        <Foreach in="posts" as="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.body }}</p>
+            <a href="/post/{{ post.title }}" style="color: black !important;">Read more</a>
+            <br>
+        </Foreach>
+    </Container>
+    
+</body>
