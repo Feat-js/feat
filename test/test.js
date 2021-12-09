@@ -15,6 +15,10 @@ app.get('/about', function (req, res) {
     res.render('/test/pages/about', { email });
 });
 
+app.get('/counter', function (req, res) {
+    res.render('/test/pages/counter', { email });
+});
+
 app.get('/post/:title', function (req, res) {
     let post = posts.find(x => x.title === req.params.title);
     if (!post) res.render("/test/pages/post", { post: { title: "Error 404", body: "Post not found" }, email });

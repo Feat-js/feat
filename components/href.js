@@ -24,6 +24,6 @@ module.exports = {
         },
     ],
     code: (attributes, content, data, blb) => {
-        return `<a ${attributes.target ? "target=\"" + attributes.target + "\"" : ""} href="${attributes.url ? attributes.url : "#"}">${attributes.text ? attributes.text : "Text undefined."}</a>`;
+        return `<a ${attributes.target ? "target=\"" + attributes.target + "\"" : ""} href="${attributes.url ? attributes.url : "javascript:void(0)"}">${attributes.text ? attributes.text : "Text undefined."}</a>`;
     }
 }   

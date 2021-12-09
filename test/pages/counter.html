@@ -11,12 +11,13 @@
 
     <Container>
 
-        <h1>{{ post.title }}</h1>
+        <h1>The count is currently <a feat:bind="counter"> 0 </a></h1>
 
-        <p>{{ post.body }}</p>
+        <button feat:decrement="counter">-</button>
+        <button feat:reset="counter">Reset</button>
+        <button feat:increment="counter">+</button>
 
     </Container>
 
-    <br><br>
-
 </body>
+

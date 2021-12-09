@@ -1,7 +1,7 @@
 // Feat Cookie Helper
-class FeatCookies {
+class FeatCookies{
     constructor(){
-
+      
     }
 
     /**

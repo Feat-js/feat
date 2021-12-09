@@ -60,7 +60,7 @@ class Feat {
      */
     render(view, options, callback) {
         //get view file path
-        let maxIterations = 1; //100
+        let maxIterations = 3; //100
         let startTime = new Date();
 
         function renderView(viewPath, options) {
