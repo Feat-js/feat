@@ -30,7 +30,5 @@ module.exports = {
         if (!html) throw new Error("The path for include is not valid.")
 
         return html;
-
-        
     }
 }   
