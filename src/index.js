@@ -3,22 +3,28 @@ let fs = require('fs');
 
 let components = require("./../lib/exports");
 
-//? Maybe make a option to allow custom error handler (Fate)
+//? Maybe make a option to allow custom error handler (Feat)
 
 class Feat {
+    /**
+     * @param {Express App} app The express application
+     * @param {Object} opts Options for Feat
+     */
     constructor(app, opts) {
         //set res.render function for express
         if (app) {
             app.render = this.render;
+            app.useErrorHandler = this.useErrorHandler;
             process.Featjs = {};
             process.Featjs.class = this;
             process.Featjs.data = {};
             process.Featjs.app = app;
             process.Featjs.fBlob = [];
+            this.useErrorHandler = opts?.useErrorHandler;
 
             let frontendImport = fs.readdirSync(__dirname + '/../frontend');
             let fullHtml = ``;
-    
+
             frontendImport.forEach((file, i) => {
                 let header = fs.readFileSync(__dirname + '/../frontend/' + file, 'utf8');
                 fullHtml += header + "\n";
@@ -32,6 +38,26 @@ class Feat {
 
 
     }
+
+    useErrorHandler(){
+        process.Featjs.app.use((error, req, res, next) => {
+            res.status(500);
+            return res.send(`
+                Feat.js Error - 500
+                <hr/>
+                An internal Server error occured.
+                <br/><br/>
+                ${error.toString()}
+            `)
+        })
+    }
+
+    /**
+     * 
+     * @param {String} view Path to view
+     * @param {Object} options Render options
+     * @param {Callback} callback Callback
+     */
     render(view, options, callback) {
         //get view file path
         let maxIterations = 5; //100

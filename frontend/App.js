@@ -1,6 +1,6 @@
-class FateApp {
+class FeatApp {
     constructor(){
-        this.log = (...contents) => console.log(`[FateApp]`, contents.join(" "));
+        this.log = (...contents) => console.log(`[FeatApp]`, contents.join(" "));
         this.log(`Working...`);
         this.states = {};
     }
@@ -22,4 +22,4 @@ class FateApp {
         return this.states[name];
     }
 }
-const FateInstance = new FateApp();
+const Feat = new FeatApp();
