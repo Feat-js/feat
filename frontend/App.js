@@ -2,7 +2,7 @@ class FeatApp extends FeatEvents {
     constructor(){
         super();
         this.log = (...contents) => console.log(`[FeatApp]`, contents.join(" "));
-        this.log(`Feat attached!`);
+        this.log(`Feat attached!\nHappy development day! :D`);
         this.states = {};
         this.stateEvents = {};
         this.defaultStates = {};

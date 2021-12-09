@@ -14,12 +14,12 @@
 - [x] Integrated attributes like if, disabled, checked, etc.
 - [X] Express support!
 - [X] Built-in server error handler
+- [X] Advanced event system
+- [X] State management
  
 ## Soon:
 - [ ] Typescript Support
-- [ ] Advanced event system
 - [ ] More advanced tags
-- [ ] State management
 - [ ] And more!
 
 
@@ -139,14 +139,10 @@ This will loop through the array and render the content within the tags for each
 
 This will render the content within the tags if the condition is true.
 Do note however that with variables there are multiple ways to do this.
-You can use the following syntaxes:
+You can use the following syntax:
 
 ```
 {{ variable === true }} (works)
-{{ variable }} === true (works)
-{{ variable }} (works)
-1 === 1 (works)
-variable (does not work)
 ```
 
 
@@ -161,6 +157,39 @@ The callback function will be called when the view is rendered.
 ```
 callback(err, html)
 ```
+
+## Attributes
+
+We have a few attributes that can be used for the event system and the reactiveness.
+Simply use the following syntax:
+
+**feat:onclick="eventName"**
+If you click on the element the event will be triggered.
+
+**feat:increment="stateName"**
+If you click on the element the state will be incremented. (integer only) 
+
+**feat:decrement="stateName"**
+If you click on the element the state will be decremented. (integer only)
+
+**feat:toggle="stateName"**
+If you click on the element the state will be toggled. (boolean only)
+
+**feat:refresh="stateName"**
+If you click on the element the state will be refreshed.
+
+**feat:reset="stateName"**
+If you click on the element the state will be reset to it's original value.
+
+**feat:bind="stateName"**
+The element will be bound to the state, If the state updates the element will be updated.
+Important behaviour of this attribute is that it will set the default value of the state if it is not set to the text, int, etc within your tags.
+Another important thing to note is that it will set the id of your element if you do not have an id set yet.
+
+# Frontend API
+
+In the frontend you can access things like the state manager, the event system and more!
+Please go to the [Frontend Documentation](https://github.com/Feat-js/feat/blob/main/FRONTEND.md) for more information.
 
 # Contributing
 
