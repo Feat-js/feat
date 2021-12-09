@@ -35,8 +35,8 @@ class FeatApp {
     /**
      * 
      * @param {String} selector Element selector. Ex: .className #elementID
-     * @param {*} className Element Object
-     * @returns 
+     * @param {String} className Class to toggle
+     * @returns Element Object
      */
     toggleClass(selector, className){
         let el = this.getElement(selector);
