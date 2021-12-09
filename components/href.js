@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Href",
+    name: "href",
     FeatAttributesSupport: false,
     description: "Redirect a user",
     selfClosing: true,
@@ -11,7 +11,7 @@ module.exports = {
             required: false
         },   
         {
-            name: "href",
+            name: "url",
             type: "string",
             description: "Url where user is redirected to", 
             required: true
