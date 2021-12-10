@@ -8,6 +8,10 @@
         <NavItem name="Contact" href="mailto:{{ email }}" />
     </Navigation>
 
+    <If condition="{{ fn  == 'header.html' }}">
+        Testing
+    </If>
+
     <Container>
         <Foreach in="posts" as="post">
             <If condition="{{ post.published === true }}">
