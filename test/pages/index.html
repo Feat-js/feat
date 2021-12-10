@@ -1,26 +1,10 @@
-<Include src="test/pages/parts/{{ fn }}" />
-<body>
 
-    <Navigation title="My cool website" href="/">
-        <NavItem name="Home" href="/" />
-        <NavItem name="About" href="/about" />	
-        <NavItem name="Counter" href="/counter" />	
-        <NavItem name="Contact" href="mailto:{{ email }}" />
-    </Navigation>
+    <if condition="{{ fn_test === false }}">
+        <p>it is false</p>
+    </if>
 
-    <If condition="{{ fn  == 'header.html' }}">
-        Testing
-    </If>
+    <if condition="{{ fn_test === true }}">
+        <p>it is true</p>
+    </if>
 
-    <Container>
-        <Foreach in="posts" as="post">
-            <If condition="{{ post.published === true }}">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.body }}</p>
-                <a href="/post/{{ post.title }}" style="color: black !important;">Read more</a>
-                <br>
-            </If>
-        </Foreach>
-    </Container>
-
-</body>
+   

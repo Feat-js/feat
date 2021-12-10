@@ -16,7 +16,6 @@ module.exports = {
         Src: ""
         */
 
-        let fs = require("fs");
         let condition = attributes.condition;
         
         if (!condition) throw new Error("If statement requires a condition.");
@@ -24,7 +23,13 @@ module.exports = {
         let pullData = require("./../lib/parseVars");
         let conditionResult = pullData(condition, data, blb);
 
-        if (conditionResult === "true") {
+        if (conditionResult == "true") { conditionResult = true; }
+        else if (conditionResult == "false") { conditionResult = false; }
+        else {
+            throw new Error("If statement condition must be true or false.");
+        }
+
+        if (conditionResult === true) {
             return content;
         } else {
             return undefined;
