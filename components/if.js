@@ -25,10 +25,6 @@ module.exports = {
 
         if (conditionResult == "true") { conditionResult = true; }
         else if (conditionResult == "false") { conditionResult = false; }
-        else {
-            throw new Error("If statement condition must be true or false.");
-        }
-
         if (conditionResult === true) {
             return content;
         } else {
