@@ -267,7 +267,7 @@ You are also not allowed to say that you created feat.js, The skyswift team made
 we also would like to point out that we are not responsible for any damage that happens or anything that happens to you.
 If you have any questions about this please feel free to open an issue on github.
 
-## 7. Have fun
+### 7. Have fun
 
 Please make sure that you have fun while contributing to FeatJS.
 Fun is the key to a good contribution. Don't be afraid to ask for help if you need it :)
