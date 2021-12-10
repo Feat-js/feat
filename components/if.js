@@ -21,10 +21,11 @@ module.exports = {
         
         if (!condition) throw new Error("If statement requires a condition.");
 
-        let pullData = require("./../lib/parseVars");
-        let conditionResult = pullData(condition, data, blb);
+        // parse the condition to a boolean
+        if (condition.toLowerCase() == "true") condition = true;
+        else if (condition.toLowerCase() == "false") condition = false;
 
-        if (conditionResult) {
+        if (condition) {
             return content;
         } else {
             return undefined;

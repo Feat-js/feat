@@ -10,7 +10,7 @@
 
     <Container>
         <Foreach in="posts" as="post">
-            <If condition="{{ post.published }}">
+            <If condition="{{ post.published === true }}">
                 <h2>{{ post.title }}</h2>
                 <p>{{ post.body }}</p>
                 <a href="/post/{{ post.title }}" style="color: black !important;">Read more</a>
