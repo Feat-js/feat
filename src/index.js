@@ -1,4 +1,3 @@
-const { render } = require('express/lib/response');
 let fs = require('fs');
 
 let components = require("./../lib/exports");
