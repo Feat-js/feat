@@ -27,7 +27,7 @@ module.exports = {
         let importFile = {}; //Defining var to a global scope
 
         try {
-            importFile = require(attributes.src); //Import the component.
+            importFile = require(process.cwd() + "/" + attributes.src); //Import the component.
         } catch (e) {
             throw new Error("" + attributes.src + " is not a valid component path."); //Throw an error if the path is not valid.
         }
