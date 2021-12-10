@@ -26,8 +26,10 @@ module.exports = {
 
         let importFile = {}; //Defining var to a global scope
 
+        let parseVars = require("./../lib/parseVars")
+        
         try {
-            importFile = require(process.cwd() + "/" + attributes.src); //Import the component.
+            importFile = require(process.cwd() + "/" + parseVars(attributes.src, data, blb)); //Import the component.
         } catch (e) {
             throw new Error("" + attributes.src + " is not a valid component path."); //Throw an error if the path is not valid.
         }

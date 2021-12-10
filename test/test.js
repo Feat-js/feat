@@ -8,7 +8,7 @@ let posts = require('./posts.json');
 let email = "support@skyswift.eu";
 
 app.get('/', function (req, res) {
-    res.render('/test/pages/index', { email, posts });
+    res.render('/test/pages/index', { email, posts, fn: "header.html" });
 });
 
 app.get('/about', function (req, res) {

@@ -1,4 +1,4 @@
-<Include src="test/pages/parts/header" />
+<Include src="test/pages/parts/{{ fn }}" />
 <body>
 
     <Navigation title="My cool website" href="/">
@@ -8,6 +8,7 @@
         <NavItem name="Contact" href="mailto:{{ email }}" />
     </Navigation>
 
+    <p>{{ fn }}</p>
     <Container>
         <Foreach in="posts" as="post">
             <If condition="{{ post.published }}">

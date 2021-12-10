@@ -17,7 +17,9 @@ module.exports = {
         */
 
         let fs = require("fs");
-        let src = attributes.src;
+        let parseVars = require("./../lib/parseVars")
+        
+        let src = parseVars(attributes.src, data, blb);
         
         //remove html extention from src
         if (src.endsWith(".html")) {
