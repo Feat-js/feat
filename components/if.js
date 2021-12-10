@@ -1,3 +1,5 @@
+const parseVars = require("../lib/parseVars");
+
 module.exports = {
     name: "If",
     FeatAttributesSupport: true,
@@ -18,9 +20,11 @@ module.exports = {
 
         let fs = require("fs");
         let condition = attributes.condition;
+        let parseVars = require("../lib/parseVars");
+        condition = parseVars(condition, data, blb);
         
         if (!condition) throw new Error("If statement requires a condition.");
-
+    
         // parse the condition to a boolean
         if (condition.toLowerCase() == "true") condition = true;
         else if (condition.toLowerCase() == "false") condition = false;
