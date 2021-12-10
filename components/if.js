@@ -21,7 +21,7 @@ module.exports = {
         
         if (!condition) throw new Error("If statement requires a condition.");
 
-        let pullData = require("./../lib/pullData");
+        let pullData = require("./../lib/parseVars");
         let conditionResult = pullData(condition, data, blb);
 
         if (conditionResult) {
