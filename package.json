@@ -1,12 +1,12 @@
 {
   "name": "feat.js",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha unit",
     "start": "nodemon ./test/test.js"
   },
-  "homepage":"https://github.com/Feat-js/feat#readme",
+  "homepage": "https://github.com/Feat-js/feat#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/Feat-js/feat.git"

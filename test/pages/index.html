@@ -9,6 +9,11 @@
     </Navigation>
 
     <Container>
+        <If condition="{{ posts.length > 0 }}">
+            <p>
+                <strong>{{ posts.length }} posts are current listed.</strong>
+            </p>
+        </if>
         <Foreach in="posts" as="post">
             <If condition="{{post.published === true}}">
                 <h2>{{ post.title }}</h2>
