@@ -16,6 +16,7 @@
 - [X] Built-in server error handler
 - [X] Advanced event system
 - [X] State management
+- [X] Sexy
  
 ## Soon:
 - [ ] Typescript Support
